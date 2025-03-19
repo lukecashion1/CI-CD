@@ -26,8 +26,7 @@ jobs:
         run: |
           # Initialize Elastic Beanstalk application
           eb init my-app --platform docker --region $AWS_REGION
-          # Create an environment and set it as default
-          eb create my-app-env --sample
+          # Set the default environment
           eb use my-app-env
           # Deploy to Elastic Beanstalk
           eb deploy
